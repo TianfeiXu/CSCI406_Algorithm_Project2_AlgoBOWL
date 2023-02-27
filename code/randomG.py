@@ -1,6 +1,6 @@
 import random
 
-test_file = open('AlgoBOWL.txt','w')
+test_file = open('input.txt','w')
 
 count = 1000
 
@@ -37,7 +37,7 @@ print(len(arr))
 test_file.close()
 
 
-test_file = open('AlgoBOWL.txt','r')
-values = test_file.readlines()
-for value in values:
-    print(value.split(' '))
+# test_file = open('input.txt','r')
+# values = test_file.readlines()
+# for value in values:
+#     print(value.split(' '))
