@@ -65,7 +65,7 @@ class AlgoBOWL:
 
 if __name__ == '__main__':
 
-    target_list = [] #array to store points 
+    target_list = [] #array to store points
     file = sys.argv[1]
     with open(file) as f: # read in input file 
         n = int(f.readline())
