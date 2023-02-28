@@ -30,11 +30,11 @@ class Verifier:
     def read_output_file(self):
         with open(self.outpit_file) as f:  # read in input file
             n = int(f.readline())
-            output_list = f.readlines()[1:]
+            output_list = f.readlines()
 
         for output_line in output_list:
             self.add_operations_list.append(list(map(int,output_line.strip().split())))
-        #ic(self.add_operations_list)
+
         return self.add_operations_list
 
     def do_addition(self):
@@ -45,13 +45,13 @@ class Verifier:
     def judge_inclusion(self):
         self.read_input_file()
         sum_list=self.do_addition()
-        print(set(self.target_list)<= set(sum_list))
+        return (set(self.target_list)<= set(sum_list))
 
 
 
 
 if __name__ == '__main__':
-    vf001=Verifier("input_group592.txt",'output.txt')
-    vf001.judge_inclusion()
+    vf001=Verifier("input_group596.txt",'outputinput_group596.txt')
+    print(vf001.judge_inclusion())
 
 
